@@ -24,7 +24,7 @@ public class ChatroomController {
     public ResponseEntity<List<Chatroom>> getAllChatrooms(){
        return new ResponseEntity<>(chatroomService.findAllChatrooms(), HttpStatus.OK);
     }
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/admin/{id}")
     public ResponseEntity<Chatroom> getChatroomById(@PathVariable Long id) {
         Optional<Chatroom> chatroomOptional = chatroomService.findChatroomById(id);
         if (chatroomOptional.isEmpty()){
