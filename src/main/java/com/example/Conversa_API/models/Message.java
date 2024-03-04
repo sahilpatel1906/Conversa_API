@@ -23,8 +23,10 @@ public class Message {
     @JoinColumn(name = "chatroom_id")
     private Chatroom chatroom;
 
-    public Message (String message){
+    public Message (String message, User user, Chatroom chatroom){
         this.message = message;
+        this.user = user;
+        this.chatroom = chatroom;
     }
 
     public Message (){}
