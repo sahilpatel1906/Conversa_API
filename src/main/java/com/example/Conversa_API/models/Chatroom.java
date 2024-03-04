@@ -18,8 +18,8 @@ public class Chatroom {
     private String name;
 
     @Column
-    @OneToMany(mappedBy = "chatroom")
-    @JsonIgnoreProperties({"chatroom"})
+    @OneToMany(mappedBy = "chatrooms")
+    @JsonIgnoreProperties({"chatrooms"})
     private List<Message> messages;
 
     public Chatroom() {
