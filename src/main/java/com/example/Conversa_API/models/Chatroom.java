@@ -3,6 +3,7 @@ package com.example.Conversa_API.models;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -25,9 +26,9 @@ public class Chatroom {
     public Chatroom() {
     }
 
-    public Chatroom(String name, List<Message> messages) {
+    public Chatroom(String name) {
         this.name = name;
-        this.messages = messages;
+        this.messages = new ArrayList<>();
     }
 
     public long getId() {
