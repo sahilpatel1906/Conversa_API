@@ -20,11 +20,11 @@ public class ChatroomController {
     ChatroomService chatroomService;
 
 
-    @GetMapping
+    @GetMapping(value = "/admin")
     public ResponseEntity<List<Chatroom>> getAllChatrooms(){
        return new ResponseEntity<>(chatroomService.findAllChatrooms(), HttpStatus.OK);
     }
-    @GetMapping(value = "/admin/{id}")
+    @GetMapping(value = "/{id}")
     public ResponseEntity<Chatroom> getChatroomById(@PathVariable Long id) {
         Optional<Chatroom> chatroomOptional = chatroomService.findChatroomById(id);
         if (chatroomOptional.isEmpty()){
@@ -39,7 +39,7 @@ public class ChatroomController {
         return new ResponseEntity<>(chatroom, HttpStatus.CREATED);
     }
 
-    @DeleteMapping(value = "/admin/{id}")
+    @DeleteMapping(value = "/{id}")
     public  ResponseEntity<Chatroom> deleteChatroomById(@PathVariable Long id) {
         Optional<Chatroom> chatroomOptional = chatroomService.deleteChatroomById(id);
         if (chatroomOptional.isPresent()){
