@@ -20,7 +20,7 @@ public class User {
    private String email;
 
    @JsonIgnoreProperties({"users"})
-   @OneToMany(mappedBy = "user_id")
+   @OneToMany(mappedBy = "user")
    private ArrayList<Message> messages;
 
    public User (String username, String email){
