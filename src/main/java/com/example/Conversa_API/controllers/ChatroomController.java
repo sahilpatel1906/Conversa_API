@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.security.auth.callback.CallbackHandler;
 import java.util.List;
 import java.util.Optional;
 
@@ -36,6 +37,15 @@ public class ChatroomController {
     public ResponseEntity<Chatroom> addNewChatroom(@RequestBody ChatroomDTO chatroomDTO){
         Chatroom chatroom = chatroomService.saveChatroom(chatroomDTO);
         return new ResponseEntity<>(chatroom, HttpStatus.CREATED);
+    }
+
+    @DeleteMapping(value = "/{id}")
+    public  ResponseEntity<Chatroom> deleteChatroomById(@PathVariable Long id) {
+        Optional<Chatroom> chatroomOptional = chatroomService.deleteChatroomById(id);
+        if (chatroomOptional.isPresent()){
+            return new ResponseEntity<>(chatroomOptional.get(), HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
 }
