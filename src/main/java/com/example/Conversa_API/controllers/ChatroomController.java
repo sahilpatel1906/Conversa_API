@@ -22,21 +22,20 @@ public class ChatroomController {
     @GetMapping
     public ResponseEntity<List<Chatroom>> getAllChatrooms(){
        return new ResponseEntity<>(chatroomService.findAllChatrooms(), HttpStatus.OK);
-   }
-
-   @GetMapping(value = "/{id}")
+    }
+    @GetMapping(value = "/{id}")
     public ResponseEntity<Optional<Chatroom>> getChatroomById(@PathVariable Long id) {
-       Optional<Chatroom> chatroomOptional = chatroomService.findChatroomById(id);
-       if (chatroomOptional.isEmpty()){
-           return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-       }
-       return new ResponseEntity<>(chatroomService.findChatroomById(id), HttpStatus.OK);
-   }
+        Optional<Chatroom> chatroomOptional = chatroomService.findChatroomById(id);
+        if (chatroomOptional.isEmpty()){
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(chatroomService.findChatroomById(id), HttpStatus.OK);
+    }
 
-   @PostMapping
+    @PostMapping
     public ResponseEntity<Chatroom> addNewChatroom(@RequestBody ChatroomDTO chatroomDTO){
         Chatroom chatroom = chatroomService.saveChatroom(chatroomDTO);
         return new ResponseEntity<>(chatroom, HttpStatus.CREATED);
-   }
+    }
 
 }
