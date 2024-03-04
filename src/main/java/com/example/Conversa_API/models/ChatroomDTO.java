@@ -6,14 +6,12 @@ public class ChatroomDTO {
 
     private String name;
 
-    private List<Message> messageIds;
 
     public ChatroomDTO() {
     }
 
-    public ChatroomDTO(String name, List<Message> messageIds) {
+    public ChatroomDTO(String name) {
         this.name = name;
-        this.messageIds = messageIds;
     }
 
 
@@ -25,11 +23,4 @@ public class ChatroomDTO {
         this.name = name;
     }
 
-    public List<Message> getMessageIds() {
-        return messageIds;
-    }
-
-    public void setMessageIds(List<Message> messageIds) {
-        this.messageIds = messageIds;
-    }
 }
