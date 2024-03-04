@@ -24,12 +24,12 @@ public class ChatroomController {
        return new ResponseEntity<>(chatroomService.findAllChatrooms(), HttpStatus.OK);
     }
     @GetMapping(value = "/{id}")
-    public ResponseEntity<Optional<Chatroom>> getChatroomById(@PathVariable Long id) {
+    public ResponseEntity<Chatroom> getChatroomById(@PathVariable Long id) {
         Optional<Chatroom> chatroomOptional = chatroomService.findChatroomById(id);
         if (chatroomOptional.isEmpty()){
             return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(chatroomService.findChatroomById(id), HttpStatus.OK);
+        return new ResponseEntity<>(chatroomService.findChatroomById(id).get(), HttpStatus.OK);
     }
 
     @PostMapping
