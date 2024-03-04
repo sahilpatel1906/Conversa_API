@@ -21,7 +21,7 @@ public class User {
 
    @JsonIgnoreProperties({"users"})
    @OneToMany(mappedBy = "user")
-   private ArrayList<Message> messages;
+   private List<Message> messages;
 
    public User (String username, String email){
        this.username = username;
@@ -55,11 +55,11 @@ public class User {
         this.email = email;
     }
 
-    public ArrayList<Message> getMessages() {
+    public List<Message> getMessages() {
         return messages;
     }
 
-    public void setMessages(ArrayList<Message> messages) {
+    public void setMessages(List<Message> messages) {
         this.messages = messages;
     }
 }
