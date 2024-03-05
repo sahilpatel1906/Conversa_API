@@ -1,10 +1,10 @@
 # Title
 
-Conversa - A Chatroom API
+**Conversa - A Chatroom API**
 
 ## Objective
 
-This project utilised 
+This project utilised Java, Spring Boot and a PostgreSQL database and the Spring framework to build a chatroom API that would allow the user to make requests using Postman.
 
 
 
@@ -17,7 +17,9 @@ The motivation behind this project
 
 
 
-### The URL of the GitHub repository that contains the code:
+#### The URL of the GitHub repository that contains the code:
+
+https://github.com/sahilpatel1906/Conversa_API/
 
 
 
@@ -53,7 +55,10 @@ The motivation behind this project
 
 
 
-## Contributing
+## Contributing Instructions
+
+
+....
 
 
 **Team Collaboration: Group 1**
@@ -67,7 +72,6 @@ The motivation behind this project
 
 ## Licences
 None
-
 
 
 
