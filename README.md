@@ -1,5 +1,14 @@
 # Conversa - A Chatroom API
 
+# Table of Contents
+1. [Project Description](#project description)
+2. [Installation instructions](#installation-instructions)
+3. [Usage](#usage)
+4. [Contributing Instructions](#contributing-instructions)
+5. [Licences](#licences)
+6. [References](#references)
+
+
 ## Project Description
 
 This back-end project utilised Java, Spring Boot and a PostgreSQL database to build a chatroom API that would allow the user to make requests using Postman.
@@ -238,7 +247,8 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 
 
 ## Licences
-Open Source
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 
