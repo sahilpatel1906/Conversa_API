@@ -2,7 +2,7 @@
 
 **Conversa - A Chatroom API**
 
-## Objective
+## Project Description
 
 This back-end project utilised Java, Spring Boot and a PostgreSQL database to build a chatroom API that would allow the user to make requests using Postman.
 
@@ -20,15 +20,15 @@ _The names and versions of any libraries used_
 
 
 
-##### Extensions
+#### Extensions
 
 
 
-##### Entity relationship diagrams
+#### Entity relationship diagrams
 
 
 
-##### Class diagrams
+#### Class diagrams
 
 
 
@@ -88,9 +88,22 @@ _Routes should be organised by route and not by request method_
 
 
 
+
+
+## Tests
+
+*Go the extra mile and write tests for your application. Then provide code examples and how to run them*
+
+
 ## Contributing Instructions
 
 
+
+*Provide instructions and examples so users/contributors can use the project. This will make it easy for them in case they encounter a problem – they will always have a place to reference what is expected.*
+
+*You can also make use of visual aids by including materials like screenshots to show examples of the running project and also the structure and design principles used in your project.*
+
+*Also if your project will require authentication like passwords or usernames, this is a good section to include the credentials*
 ....
 
 
