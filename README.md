@@ -1,7 +1,7 @@
 # Conversa - A Chatroom API
 
 # Table of Contents
-1. [Project Description](#project description)
+1. [Project Description](#project-description)
 2. [Installation instructions](#installation-instructions)
 3. [Usage](#usage)
 4. [Contributing Instructions](#contributing-instructions)
