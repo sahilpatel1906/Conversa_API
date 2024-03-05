@@ -7,11 +7,15 @@
 This back-end project utilised Java, Spring Boot and a PostgreSQL database to build a chatroom API that would allow the user to make requests using Postman.
 
 
-The motivation behind this project
+The motivation behind this project is to develop an understanding of creating a back-end API utilising Spring Framework and a PostgreSQL database.
 
 
-_The names and versions of any libraries used_
-
+**The names and versions of any libraries used**
+Spring Boot: Ver. 3.2.3
+Spring Boot Dev Tools
+Spring Web
+PostgreSQL Driver
+Spring Data JPA
 
 
 
@@ -21,7 +25,13 @@ _The names and versions of any libraries used_
 
 
 #### Extensions
-
+Create derived queries to enable functionality to filter by chatroom_id and filter by user_id.
+Add functionality for a user to add a profile picture.
+Add functionality for a user to post images to a chatroom.
+Add an AI chatbot to a chatroom and add functionality to enable it to respond to messages from a user.
+Import external AI APIs to allow for an increased scope of responses for the Ai chatbot.
+Create public/private chatrooms using Booleans.
+Add functionality for a user to post voicenotes in a chatroom.
 
 
 #### Entity relationship diagrams
