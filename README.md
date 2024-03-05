@@ -28,6 +28,7 @@ The motivation behind this project
 
 ## Usage
 
+
   
 
 **Images demonstrating the functionality of the API**
@@ -56,17 +57,18 @@ The motivation behind this project
 
 
 **Team Collaboration: Group 1**
-Sahil Patel - GitHub:
-Marvellous - Github:
-Yesica Nithiyanantha- Github:
-Aebel - Github:
-Jean Marwizi - Github: https://github.com/Jean-003
+-Sahil Patel - GitHub:
+-Marvellous - Github:
+-Yesica Nithiyanantha- Github:
+-Aebel - Github:
+-Jean Marwizi - Github: https://github.com/Jean-005
+
 
 
 ## Licences
-
-
 None
+
+
 
 
 
