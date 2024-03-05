@@ -56,10 +56,10 @@ https://github.com/sahilpatel1906/Conversa_API/
 **List of routes for the Conversa API**
 
 
-_Full urls including placeholders for variables (localhost:8080/users/:id)_
-_Permitted requests for each route (GET, POST, etc)_
-_Examples of permitted requests where appropriate_
-_Examples of responses_
+- *Full urls including placeholders for variables (localhost:8080/users/:id)*
+- *Permitted requests for each route (GET, POST, etc)*
+- *Examples of permitted requests where appropriate*
+- *Examples of responses*
 
 
 _Routes should be organised by route and not by request method_
@@ -95,11 +95,11 @@ _Routes should be organised by route and not by request method_
 
 
 **Team Collaboration: Group 1**
--Sahil Patel - GitHub:
--Marvellous - Github:
--Yesica Nithiyanantha- Github:
--Aebel - Github:
--Jean Marwizi - Github: https://github.com/Jean-005
+- Sahil Patel - GitHub:
+- Marvellous - Github:
+- Yesica Nithiyanantha- Github:
+- Aebel - Github:
+- Jean Marwizi - Github: https://github.com/Jean-005
 
 
 
