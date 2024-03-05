@@ -35,10 +35,12 @@ Add functionality for a user to post voicenotes in a chatroom.
 
 
 #### Entity relationship diagrams
+![Screenshot 2024-03-05 at 12 40 25](https://github.com/sahilpatel1906/Conversa_API/assets/156658708/5edc7e0a-f2b7-4ad4-b7c7-7fe3eae8032c)
 
 
 
 #### Class diagrams
+<img width="953" alt="Screenshot 2024-03-05 at 12 48 26" src="https://github.com/sahilpatel1906/Conversa_API/assets/156658708/9c30b07a-2576-43a8-a84d-7c23a0604c11">
 
 
 
