@@ -4,15 +4,36 @@
 
 ## Objective
 
-This project utilised Java, Spring Boot and a PostgreSQL database and the Spring framework to build a chatroom API that would allow the user to make requests using Postman.
-
+This back-end project utilised Java, Spring Boot and a PostgreSQL database to build a chatroom API that would allow the user to make requests using Postman.
 
 
 The motivation behind this project
 
 
+_The names and versions of any libraries used_
+
+
+
+
+
+##### MVP
+
+
+
+##### Extensions
+
+
+
+##### Entity relationship diagrams
+
+
+
+##### Class diagrams
+
+
 
 ### Key Learning Outcomes:
+
 
 
 
@@ -24,12 +45,24 @@ https://github.com/sahilpatel1906/Conversa_API/
 
 
 
-## Installation
+## Installation instructions
 
 
 
 ## Usage
 
+
+
+**List of routes for the Conversa API**
+
+
+_Full urls including placeholders for variables (localhost:8080/users/:id)_
+_Permitted requests for each route (GET, POST, etc)_
+_Examples of permitted requests where appropriate_
+_Examples of responses_
+
+
+_Routes should be organised by route and not by request method_
 
   
 
@@ -71,7 +104,7 @@ https://github.com/sahilpatel1906/Conversa_API/
 
 
 ## Licences
-None
+Open Source
 
 
 
