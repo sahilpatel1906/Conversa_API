@@ -42,4 +42,13 @@ public class MessageController {
         return new ResponseEntity<>(message, HttpStatus.CREATED);
     }
 
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<Message> deleteMessage(@PathVariable Long id){
+        Optional<Message> deletedMessage = messageService.deleteMessage(id);
+        if(deletedMessage.isPresent()){
+            return new ResponseEntity<>(deletedMessage.get(), HttpStatus.OK);
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
 }

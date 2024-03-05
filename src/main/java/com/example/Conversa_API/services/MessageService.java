@@ -48,4 +48,10 @@ public class MessageService {
         messageRepository.save(message);
         return message;
     }
+
+    public Optional<Message> deleteMessage(Long id) {
+        Optional<Message> message =  messageRepository.findById(id);
+        messageRepository.deleteById(id);
+        return message;
+    }
 }
