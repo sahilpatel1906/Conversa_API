@@ -25,13 +25,13 @@ Spring Data JPA
 
 
 #### Extensions
-Create derived queries to enable functionality to filter by chatroom_id and filter by user_id.
-Add functionality for a user to add a profile picture.
-Add functionality for a user to post images to a chatroom.
-Add an AI chatbot to a chatroom and add functionality to enable it to respond to messages from a user.
-Import external AI APIs to allow for an increased scope of responses for the Ai chatbot.
-Create public/private chatrooms using Booleans.
-Add functionality for a user to post voicenotes in a chatroom.
+- Create derived queries to enable functionality to filter by chatroom_id and filter by user_id.
+- Add functionality for a user to add a profile picture.
+- Add functionality for a user to post images to a chatroom.
+- Add an AI chatbot to a chatroom and add functionality to enable it to respond to messages from a user.
+- Import external AI APIs to allow for an increased scope of responses for the Ai chatbot.
+- Create public/private chatrooms using Booleans.
+- Add functionality for a user to post voicenotes in a chatroom.
 
 
 #### Entity relationship diagrams
