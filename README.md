@@ -21,8 +21,11 @@ Spring Data JPA
 
 
 ##### MVP
-
-
+- Create a database called chatroom_db.
+- Create Models and DTOs for User, Chatroom, and Message.
+- Create a DataLoader which populates our table with sample data to use for testing purposes.
+- Create Repositories for User, Chatroom, and Message.
+- Create Controllers and Services to cover the Create, Read, Update and Delete (CRUD) routes for User, Chatroom, and Message.
 
 #### Extensions
 - Create derived queries to enable functionality to filter by chatroom_id and filter by user_id.
@@ -43,18 +46,9 @@ Spring Data JPA
 <img width="953" alt="Screenshot 2024-03-05 at 12 48 26" src="https://github.com/sahilpatel1906/Conversa_API/assets/156658708/9c30b07a-2576-43a8-a84d-7c23a0604c11">
 
 
-
-### Key Learning Outcomes:
-
-
-
-
-
 #### The URL of the GitHub repository that contains the code:
 
 https://github.com/sahilpatel1906/Conversa_API/
-
-
 
 
 ## Installation instructions
