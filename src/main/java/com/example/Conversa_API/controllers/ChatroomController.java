@@ -2,7 +2,9 @@ package com.example.Conversa_API.controllers;
 
 import com.example.Conversa_API.models.Chatroom;
 import com.example.Conversa_API.models.ChatroomDTO;
+import com.example.Conversa_API.models.Message;
 import com.example.Conversa_API.services.ChatroomService;
+import com.example.Conversa_API.services.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +21,6 @@ public class ChatroomController {
     @Autowired
     ChatroomService chatroomService;
 
-
     @GetMapping(value = "/admin")
     public ResponseEntity<List<Chatroom>> getAllChatrooms(){
        return new ResponseEntity<>(chatroomService.findAllChatrooms(), HttpStatus.OK);
@@ -32,6 +33,12 @@ public class ChatroomController {
         }
         return new ResponseEntity<>(chatroomService.findChatroomById(id).get(), HttpStatus.OK);
     }
+
+    @GetMapping
+    public ResponseEntity <List<Chatroom>> filterByUserId(@RequestParam (required = true, name = "userId") Long userId){
+        return new ResponseEntity<>(chatroomService.filterByUserId(userId), HttpStatus.OK);
+    }
+
 
     @PostMapping
     public ResponseEntity<Chatroom> addNewChatroom(@RequestBody ChatroomDTO chatroomDTO){
