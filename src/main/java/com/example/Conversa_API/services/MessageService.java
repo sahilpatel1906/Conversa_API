@@ -10,6 +10,7 @@ import com.example.Conversa_API.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -59,5 +60,16 @@ public class MessageService {
         Message messageToUpdate = messageRepository.findById(id).get();
         messageToUpdate.setMessage(message);
         return messageRepository.save(messageToUpdate);
+    }
+
+    public List<Long> filterByUserId(Long userId) {
+//        List<Message> filteredMessages = messageRepository.findDistinctByUserId(userId);
+//
+//        List<Long> filteredIds = new ArrayList<>();
+//        for(Message message : filteredMessages){
+//            filteredIds.add(message.getChatroom().getId());
+//        }
+//        return filteredIds;
+        return messageRepository.findDistinctChatroomIdByUserId(userId);
     }
 }

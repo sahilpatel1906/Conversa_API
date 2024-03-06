@@ -1,5 +1,6 @@
 package com.example.Conversa_API.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 
@@ -20,7 +21,7 @@ public class Chatroom {
 
     @Column
     @OneToMany(mappedBy = "chatroom")
-    @JsonIgnoreProperties({"chatrooms"})
+    @JsonIgnore
     private List<Message> messages;
 
     public Chatroom() {
