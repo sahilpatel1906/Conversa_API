@@ -51,4 +51,16 @@ public class MessageController {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+    @PatchMapping(value = "/{id}")
+    public ResponseEntity<Message> updateMessage(@PathVariable Long id, @RequestBody String message) {
+        Optional<Message> messageOptional = messageService.findMessage(id);
+        if (messageOptional.isPresent()) {
+            Message updatedMessage = messageService.updateMessageById(id, message);
+            return new ResponseEntity<>(updatedMessage, HttpStatus.OK);
+
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
+
+
 }
