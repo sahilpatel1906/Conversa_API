@@ -39,6 +39,12 @@ public class ChatroomController {
         return new ResponseEntity<>(chatroom, HttpStatus.CREATED);
     }
 
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<Chatroom> updateChatroomById(@RequestBody ChatroomDTO chatroomDTO, @PathVariable Long id){
+        Chatroom chatroom = chatroomService.updateChatroomById(chatroomDTO, id);
+        return new ResponseEntity<>(chatroom, HttpStatus.OK);
+    }
+
     @DeleteMapping(value = "/{id}")
     public  ResponseEntity<Chatroom> deleteChatroomById(@PathVariable Long id) {
         Optional<Chatroom> chatroomOptional = chatroomService.deleteChatroomById(id);

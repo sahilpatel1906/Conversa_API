@@ -46,4 +46,11 @@ public class ChatroomService {
         }
         return chatroomOptional;
     }
+
+    public Chatroom updateChatroomById(ChatroomDTO chatroomDTO, Long id) {
+        Chatroom chatroomToUpdate = chatroomRepository.findById(id).get();
+        chatroomToUpdate.setName(chatroomDTO.getName());
+        chatroomRepository.save(chatroomToUpdate);
+        return chatroomToUpdate;
+    }
 }
