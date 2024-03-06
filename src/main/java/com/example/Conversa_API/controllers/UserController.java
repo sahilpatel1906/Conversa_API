@@ -41,6 +41,16 @@ public class UserController {
       return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
 
+
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<User> uddateUser(@RequestBody UserDTO userDTO, @PathVariable Long id){
+        User user = userService.updateUser(userDTO, id);
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
+
+
+
+
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<User> deleteUser(@PathVariable Long id){
        Optional<User> deletedUser = userService.deleteUser(id);

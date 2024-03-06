@@ -45,4 +45,13 @@ public class UserService {
         }
         return userOptional;
     }
+
+    public User updateUser(UserDTO userDTO, Long id) {
+        User userToUpdate = userRepository.findById(id).get();
+        userToUpdate.setUsername(userDTO.getUsername());
+        userToUpdate.setEmail(userDTO.getEmail());
+        userRepository.save(userToUpdate);
+        return userToUpdate;
+
+    }
 }
