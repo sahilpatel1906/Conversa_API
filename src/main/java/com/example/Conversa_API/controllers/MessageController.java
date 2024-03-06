@@ -56,6 +56,8 @@ public class MessageController {
         Optional<Message> messageOptional = messageService.findMessage(id);
         if (messageOptional.isPresent()) {
             Message updatedMessage = messageService.updateMessageById(id, message);
+            return new ResponseEntity<>(updatedMessage, HttpStatus.OK);
+
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }

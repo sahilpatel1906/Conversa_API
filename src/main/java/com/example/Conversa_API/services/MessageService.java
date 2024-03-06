@@ -54,4 +54,10 @@ public class MessageService {
         messageRepository.deleteById(id);
         return message;
     }
+
+    public Message updateMessageById(Long id, String message) {
+        Message messageToUpdate = messageRepository.findById(id).get();
+        messageToUpdate.setMessage(message);
+        return messageRepository.save(messageToUpdate);
+    }
 }
