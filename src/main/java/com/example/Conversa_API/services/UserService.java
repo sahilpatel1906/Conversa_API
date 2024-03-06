@@ -8,7 +8,9 @@ import com.example.Conversa_API.repositories.MessageRepository;
 import com.example.Conversa_API.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -57,5 +59,17 @@ public class UserService {
 
     public List<User> filterByChatroomId(Long chatroomId) {
         return userRepository.findDistinctByMessagesChatroomId(chatroomId);
+    }
+
+    public User updateProfilePicture(MultipartFile imageFile, Long id) throws IOException {
+        User userToUpdate = userRepository.findById(id).get();
+        userToUpdate.setProfilePicture(imageFile.getBytes());
+        userRepository.save(userToUpdate);
+        return userToUpdate;
+    }
+
+    public byte[] getProfilePicture(Long id) {
+        User user = userRepository.findById(id).get();
+        return user.getProfilePicture();
     }
 }
