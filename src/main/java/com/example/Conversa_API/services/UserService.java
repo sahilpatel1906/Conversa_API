@@ -68,4 +68,8 @@ public class UserService {
         return userToUpdate;
     }
 
+    public byte[] getProfilePicture(Long id) {
+        User user = userRepository.findById(id).get();
+        return user.getProfilePicture();
+    }
 }
