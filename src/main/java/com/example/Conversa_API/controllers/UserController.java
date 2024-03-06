@@ -37,7 +37,7 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity <List<User>> filterByUserId(@RequestParam (required = true, name = "chatroomId") Long chatroomId){
+    public ResponseEntity <List<User>> filterByChatroomId(@RequestParam (required = true, name = "chatroomId") Long chatroomId){
         return new ResponseEntity<>(userService.filterByChatroomId(chatroomId), HttpStatus.OK);
     }
 
