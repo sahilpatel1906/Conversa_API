@@ -1,5 +1,6 @@
 package com.example.Conversa_API.controllers;
 
+import com.example.Conversa_API.models.Chatroom;
 import com.example.Conversa_API.models.User;
 import com.example.Conversa_API.models.UserDTO;
 import com.example.Conversa_API.services.UserService;
@@ -35,21 +36,22 @@ public class UserController {
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+    @GetMapping
+    public ResponseEntity <List<User>> filterByUserId(@RequestParam (required = true, name = "chatroomId") Long chatroomId){
+        return new ResponseEntity<>(userService.filterByChatroomId(chatroomId), HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<User> addNewUser(@RequestBody UserDTO userDTO){
       User newUser = userService.saveUser(userDTO);
       return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
 
-
     @PutMapping(value = "/{id}")
-    public ResponseEntity<User> uddateUserById(@RequestBody UserDTO userDTO, @PathVariable Long id){
+    public ResponseEntity<User> updateUserById(@RequestBody UserDTO userDTO, @PathVariable Long id){
         User user = userService.updateUserById(userDTO, id);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
-
-
-
 
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<User> deleteUser(@PathVariable Long id){

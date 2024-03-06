@@ -21,10 +21,6 @@ public class ChatroomController {
     @Autowired
     ChatroomService chatroomService;
 
-    @Autowired
-    MessageService messageService;
-
-
     @GetMapping(value = "/admin")
     public ResponseEntity<List<Chatroom>> getAllChatrooms(){
        return new ResponseEntity<>(chatroomService.findAllChatrooms(), HttpStatus.OK);
@@ -40,7 +36,7 @@ public class ChatroomController {
 
     @GetMapping
     public ResponseEntity <List<Chatroom>> filterByUserId(@RequestParam (required = true, name = "userId") Long userId){
-        return new ResponseEntity<>(messageService.filterByUserId(userId), HttpStatus.OK);
+        return new ResponseEntity<>(chatroomService.filterByUserId(userId), HttpStatus.OK);
     }
 
 

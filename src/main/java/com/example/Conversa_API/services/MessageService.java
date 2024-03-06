@@ -61,15 +61,4 @@ public class MessageService {
         messageToUpdate.setMessage(message);
         return messageRepository.save(messageToUpdate);
     }
-
-    public List<Chatroom> filterByUserId(Long userId) {
-        return chatroomRepository.findDistinctByMessagesUserId(userId);
-
-//        List<Chatroom> filteredChatrooms = new ArrayList<>();
-//        for(Message message : filteredMessages){
-//            filteredChatrooms.add(message.getChatroom());
-//
-//        }
-//        return filteredChatrooms;
-    }
 }

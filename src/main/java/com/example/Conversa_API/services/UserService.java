@@ -1,5 +1,6 @@
 package com.example.Conversa_API.services;
 
+import com.example.Conversa_API.models.Chatroom;
 import com.example.Conversa_API.models.Message;
 import com.example.Conversa_API.models.User;
 import com.example.Conversa_API.models.UserDTO;
@@ -52,6 +53,9 @@ public class UserService {
         userToUpdate.setEmail(userDTO.getEmail());
         userRepository.save(userToUpdate);
         return userToUpdate;
+    }
 
+    public List<User> filterByChatroomId(Long chatroomId) {
+        return userRepository.findDistinctByMessagesChatroomId(chatroomId);
     }
 }

@@ -53,4 +53,8 @@ public class ChatroomService {
         chatroomRepository.save(chatroomToUpdate);
         return chatroomToUpdate;
     }
+
+    public List<Chatroom> filterByUserId(Long userId) {
+        return chatroomRepository.findDistinctByMessagesUserId(userId);
+    }
 }
