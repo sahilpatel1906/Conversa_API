@@ -46,7 +46,7 @@ public class UserService {
         return userOptional;
     }
 
-    public User updateUser(UserDTO userDTO, Long id) {
+    public User updateUserById(UserDTO userDTO, Long id) {
         User userToUpdate = userRepository.findById(id).get();
         userToUpdate.setUsername(userDTO.getUsername());
         userToUpdate.setEmail(userDTO.getEmail());
