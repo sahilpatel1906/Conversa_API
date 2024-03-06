@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -62,4 +64,16 @@ public class UserController {
        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
 
+    @PatchMapping(value = "/{id}/profilePicture")
+    public ResponseEntity<User> updateUserProfilePicture(@RequestParam("image") MultipartFile imageFile, @PathVariable Long id) {
+        Optional<User> userOptional = userService.findUser(id);
+        if(userOptional.isPresent()){
+            try {
+                return new ResponseEntity<>(userService.updateProfilePicture(imageFile, id), HttpStatus.OK);
+            } catch(IOException exception) {
+                return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
+            }
+        }
+        return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+    }
 }

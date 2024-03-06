@@ -24,10 +24,15 @@ public class User {
    @JsonIgnore
    private List<Message> messages;
 
+   @Column (name = "profile_picture")
+   @JsonIgnore
+   private byte[] profilePicture;
+
    public User (String username, String email){
        this.username = username;
        this.email = email;
        this.messages = new ArrayList<>();
+       this.profilePicture = null;
    }
 
    public User(){}
@@ -62,6 +67,14 @@ public class User {
 
     public void setMessages(List<Message> messages) {
         this.messages = messages;
+    }
+
+    public byte[] getProfilePicture() {
+        return profilePicture;
+    }
+
+    public void setProfilePicture(byte[] profilePicture) {
+        this.profilePicture = profilePicture;
     }
 }
 
