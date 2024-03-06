@@ -39,7 +39,7 @@ public class ChatroomController {
     }
 
     @GetMapping
-    public ResponseEntity <List<Long>> filterByUserId(@RequestParam (required = true, name = "userId") Long userId){
+    public ResponseEntity <List<Chatroom>> filterByUserId(@RequestParam (required = true, name = "userId") Long userId){
         return new ResponseEntity<>(messageService.filterByUserId(userId), HttpStatus.OK);
     }
 

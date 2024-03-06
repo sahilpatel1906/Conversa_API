@@ -62,14 +62,14 @@ public class MessageService {
         return messageRepository.save(messageToUpdate);
     }
 
-    public List<Long> filterByUserId(Long userId) {
-//        List<Message> filteredMessages = messageRepository.findDistinctByUserId(userId);
-//
-//        List<Long> filteredIds = new ArrayList<>();
+    public List<Chatroom> filterByUserId(Long userId) {
+        return chatroomRepository.findDistinctByMessagesUserId(userId);
+
+//        List<Chatroom> filteredChatrooms = new ArrayList<>();
 //        for(Message message : filteredMessages){
-//            filteredIds.add(message.getChatroom().getId());
+//            filteredChatrooms.add(message.getChatroom());
+//
 //        }
-//        return filteredIds;
-        return messageRepository.findDistinctChatroomIdByUserId(userId);
+//        return filteredChatrooms;
     }
 }

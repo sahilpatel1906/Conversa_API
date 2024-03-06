@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface MessageRepository extends JpaRepository<Message, Long> {
-    List<Long> findDistinctChatroomIdByUserId(Long id);
+
 
 
 //    SELECT DISTINCT chatroom_id FROM messages WHERE user_id = 1
