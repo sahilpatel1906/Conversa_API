@@ -18,11 +18,11 @@ The motivation behind this project is to develop an understanding of creating a 
 
 
 **The names and versions of any libraries used**
-Spring Boot: Ver. 3.2.3
-Spring Boot Dev Tools
-Spring Web
-PostgreSQL Driver
-Spring Data JPA
+- Spring Boot: Ver. 3.2.3
+- Spring Boot Dev Tools
+- Spring Web
+- PostgreSQL Driver
+- Spring Data JPA
 
 
 
