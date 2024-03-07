@@ -11,6 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.imageio.ImageIO;
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
@@ -63,14 +65,11 @@ public class UserController {
 
 
     @GetMapping(value = "/{id}/profilePicture")
-    public ResponseEntity<?> getUserProfilePicture(@PathVariable Long id){
+    public ResponseEntity<String> getUserProfilePicture(@PathVariable Long id){
         Optional<User> userOptional = userService.findUser(id);
         if(userOptional.isPresent()){
-            byte[] image = userService.getProfilePicture(id);
-            return ResponseEntity.status(HttpStatus.OK)
-                    .contentType(MediaType.valueOf("image/png"))
-                    .body(image);
-
+            String image = userService.getProfilePicture(id);
+            return new ResponseEntity<>(image, HttpStatus.OK);
 
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
@@ -85,6 +84,7 @@ public class UserController {
             try {
                 return new ResponseEntity<>(userService.updateProfilePicture(imageFile, id), HttpStatus.OK);
             } catch(IOException exception) {
+                exception.printStackTrace();
                 return new ResponseEntity<>(null, HttpStatus.FORBIDDEN);
             }
         }

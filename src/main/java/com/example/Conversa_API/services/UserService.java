@@ -10,7 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.nio.file.*;
+import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.Optional;
 
@@ -63,12 +66,18 @@ public class UserService {
 
     public User updateProfilePicture(MultipartFile imageFile, Long id) throws IOException {
         User userToUpdate = userRepository.findById(id).get();
-        userToUpdate.setProfilePicture(imageFile.getBytes());
+        Path path = Paths.get("./images");
+        if (!Files.exists(path)){
+            Files.createDirectories(path);
+        }
+        Path filePath = path.resolve(id + ".png");
+        Files.copy(imageFile.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
+        userToUpdate.setProfilePicture("./images" + id + ".png");
         userRepository.save(userToUpdate);
         return userToUpdate;
     }
 
-    public byte[] getProfilePicture(Long id) {
+    public String getProfilePicture(Long id) {
         User user = userRepository.findById(id).get();
         return user.getProfilePicture();
     }
