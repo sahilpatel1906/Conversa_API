@@ -26,7 +26,7 @@ public class User {
 
    @Column (name = "profile_picture")
    @JsonIgnore
-   private byte[] profilePicture;
+   private String profilePicture;
 
    public User (String username, String email){
        this.username = username;
@@ -69,11 +69,11 @@ public class User {
         this.messages = messages;
     }
 
-    public byte[] getProfilePicture() {
+    public String getProfilePicture() {
         return profilePicture;
     }
 
-    public void setProfilePicture(byte[] profilePicture) {
+    public void setProfilePicture(String profilePicture) {
         this.profilePicture = profilePicture;
     }
 }
