@@ -22,13 +22,14 @@ public class UserController {
     @Autowired
     UserService userService;
 
-
-    @GetMapping(value = "/admin")
-    public ResponseEntity<List<User>> getAllUsers(){
-      List<User> users = userService.getAllUsers();
-      return new ResponseEntity<>(users, HttpStatus.OK);
+    @GetMapping
+    public ResponseEntity <List<User>> getAllUsersAndFilters(@RequestParam (required = false, name = "chatroomId") Long chatroomId){
+        if(chatroomId != null){
+            return new ResponseEntity<>(userService.filterByChatroomId(chatroomId), HttpStatus.OK);
+        }
+        List<User> users = userService.getAllUsers();
+        return new ResponseEntity<>(users, HttpStatus.OK);
     }
-
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id){
@@ -37,11 +38,6 @@ public class UserController {
             return new ResponseEntity<>(foundUser.get(), HttpStatus.OK);
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
-    }
-
-    @GetMapping
-    public ResponseEntity <List<User>> filterByChatroomId(@RequestParam (required = true, name = "chatroomId") Long chatroomId){
-        return new ResponseEntity<>(userService.filterByChatroomId(chatroomId), HttpStatus.OK);
     }
 
     @PostMapping

@@ -21,10 +21,14 @@ public class ChatroomController {
     @Autowired
     ChatroomService chatroomService;
 
-    @GetMapping(value = "/admin")
-    public ResponseEntity<List<Chatroom>> getAllChatrooms(){
-       return new ResponseEntity<>(chatroomService.findAllChatrooms(), HttpStatus.OK);
+    @GetMapping
+    public ResponseEntity <List<Chatroom>> getAllChatroomsAndFilters(@RequestParam (required = false, name = "userId") Long userId){
+        if(userId != null){
+            return new ResponseEntity<>(chatroomService.filterByUserId(userId), HttpStatus.OK);
+        }
+        return new ResponseEntity<>(chatroomService.findAllChatrooms(), HttpStatus.OK);
     }
+
     @GetMapping(value = "/{id}")
     public ResponseEntity<Chatroom> getChatroomById(@PathVariable Long id) {
         Optional<Chatroom> chatroomOptional = chatroomService.findChatroomById(id);
@@ -33,12 +37,6 @@ public class ChatroomController {
         }
         return new ResponseEntity<>(chatroomService.findChatroomById(id).get(), HttpStatus.OK);
     }
-
-    @GetMapping
-    public ResponseEntity <List<Chatroom>> filterByUserId(@RequestParam (required = true, name = "userId") Long userId){
-        return new ResponseEntity<>(chatroomService.filterByUserId(userId), HttpStatus.OK);
-    }
-
 
     @PostMapping
     public ResponseEntity<Chatroom> addNewChatroom(@RequestBody ChatroomDTO chatroomDTO){

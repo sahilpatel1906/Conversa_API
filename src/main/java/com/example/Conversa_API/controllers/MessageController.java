@@ -21,7 +21,7 @@ public class MessageController {
     @Autowired
     MessageService messageService;
 
-    @GetMapping(value = "/admin")
+    @GetMapping
     public ResponseEntity<List<Message>> getAllMessages(){
         List<Message> messages = messageService.getAllMessages();
         return new ResponseEntity<>(messages, HttpStatus.OK);
