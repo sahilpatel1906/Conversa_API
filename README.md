@@ -76,53 +76,48 @@ Run the command ```git clone git@github.com:sahilpatel1906/Conversa_API.git```
 - Users:
   - GET:                 
     - getAllUsers: “localhost:8080/users/admin”
-    - Sample Output:
-      ```javascript
-      [
-        {
-            "id": 2,
-            "username": "Marvellous",
-            "email": "marvellous@outlook.com",
-            "messages": [
-                {
-                    "id": 4,
-                    "message": "Shush! I can’t hear what the voices are saying.",
-                    "user": {
-                        "id": 2,
-                        "username": "Marvellous",
-                        "email": "marvellous@outlook.com"
-                    },
-                    "chatroom": {
-                        "id": 1,
-                        "name": "Axolotl"
-                    }
-                }
-            ]
-        },
-        {
-            "id": 3,
-            "username": "Jean",
-            "email": "jean@hotmail.com",
-            "messages": [
-                {
-                    "id": 3,
-                    "message": "If, at first, you don’t succeed, destroy the evidence that you tried.",
-                    "user": {
-                        "id": 3,
-                        "username": "Jean",
-                        "email": "jean@hotmail.com"
-                    },
-                    "chatroom": {
-                        "id": 2,
-                        "name": "Gecko"
-                    }
-                }
-            ]
-        }
-      ]
+      - Sample Output:
+        ```javascript
+        [
+          {
+              "id": 1,
+              "username": "Yesica",
+              "email": "yesica@gmail.com"
+          },
+          {
+              "id": 2,
+              "username": "Marvellous",
+              "email": "marvellous@outlook.com"
+          }
+        ]
       
     - getUserById: “localhost:8080/users/{id}”
-      
+      - Sample Output:
+        ```javascript
+        {
+            "id": 1,
+            "username": "Yesica",
+            "email": "yesica@gmail.com"
+        }
+    - filterByChatroomId: "localhost:8080/users?chatroomId={id}"
+      - Sample Output:
+        ```javascript
+        [
+          {
+              "id": 1,
+              "username": "Yesica",
+              "email": "yesica@gmail.com"
+          },
+          {
+              "id": 2,
+              "username": "Marvellous",
+              "email": "marvellous@outlook.com"
+          }
+        ]
+    - getUserProfilePicture: "localhost:8080/users/{id}/profilePicture"
+      - Sample Output:
+        ![response](https://github.com/sahilpatel1906/Conversa_API/assets/156692751/4f1f8102-3334-48e6-9a7c-44264afd7191)
+
 
   - POST:
     - addNewUser: “localhost:8080/users” -> Request Body:
@@ -132,7 +127,24 @@ Run the command ```git clone git@github.com:sahilpatel1906/Conversa_API.git```
           "username": "Gorilla",
           "email": "Gorilla@Gorilla.com"
         }
-      
+      - Sample Output:
+        ```javascript
+        {
+          "id": 6,
+          "username": "Gorilla",
+          "email": "Gorilla@Gorilla.com"
+        }
+  - PATCH:
+    - getUserProfilePicture: "localhost:8080/users/{id}/profilePicture"
+      - Sample Payload:
+          <img width="841" alt="Screenshot 2024-03-06 at 18 35 25" src="https://github.com/sahilpatel1906/Conversa_API/assets/156692751/47ebe57f-cd4b-4099-aaf8-7f36a65bae5c">
+      - Sample Output:
+        ```javascript
+        {
+          "id": 1,
+          "username": "Yesica",
+          "email": "yesica@gmail.com"
+        }   
 Messages: 
 - GET:
   - getAllMessages: “localhost:8080/messages/admin”
