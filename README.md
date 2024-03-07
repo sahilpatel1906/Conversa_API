@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">Conversa - A Chatroom API</h1>
+<h1 align="center" id="title">Conversa - A Chatroom API</h1>
 
 # Table of Contents
 1. [Project Description](#project-description)
@@ -18,7 +18,7 @@ The motivation behind this project was to deepen our understanding of developing
 
 
 
-<p style="text-align: center;">![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+<p align="center">![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)</p>
