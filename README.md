@@ -1,12 +1,12 @@
 <h1 align="center" id="title">Conversa - A Chatroom API</h1>
 
-# Table of Contents
+## Table of Contents
 1. [Project Description](#project-description)
 2. [Installation instructions](#installation-instructions)
 3. [Usage](#usage)
 4. [Contributing Instructions](#contributing-instructions)
-5. [Licences](#licences)
-6. [References](#references)
+5. [Credits and Acknowledgements](credits-and-acknowledgements)
+6. [Licences](#licences)
 
 
 ## Project Description
@@ -392,6 +392,8 @@ Chatrooms:
 **This image displays the users table**
 
 
+
+
 ## Contributing Instructions
 
 We appreciate your interest in contributing to the Conversa API Project. We welcome contributions of all kinds, from bug reports and documentation improvements to new features and code changes.
@@ -415,40 +417,29 @@ Find below our contributing guidelines. By following these guidelines, you'll he
 
 
 
+## Credits and Acknowledgements
 
+### The Axolotl Intelligence Collaborators:
+- Sahil Patel 🙅‍♂️ - GitHub: https://github.com/sahilpatel1906
+- Marvellous Akib 🙆‍♂️ - Github: https://github.com/Marv3llous
+- Yesica Nithiyanantha 💁‍♀️ - Github: https://github.com/ney601
+- Aebel Shajan 🤦 - Github: https://github.com/Aebel-Shajan
+- Jean Marwizi 🤷‍♀️	- Github: https://github.com/Jean-005
 
+### Special thanks to:
 
+- Anna Henderson
+- Colin Farquhar
+- Richard Sneyd
+- Thibyaa Mahasivam
+- Zsolt Podoba-Szalai
 
-
-
-
-
-
-
-
-
-
-
-
-### Collaborators:
-- Sahil Patel - GitHub: https://github.com/sahilpatel1906
-- Marvellous Akib - Github: https://github.com/Marv3llous
-- Yesica Nithiyanantha- Github: https://github.com/ney601
-- Aebel Shajan - Github: https://github.com/Aebel-Shajan
-- Jean Marwizi - Github: https://github.com/Jean-005
-
+**For their invaluable guidance and assistance with this project.**
 
 
 ## Licences
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-
-
-
-## References 
-
-
 
 
 
