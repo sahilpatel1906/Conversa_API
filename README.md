@@ -148,20 +148,95 @@ Run the command ```git clone git@github.com:sahilpatel1906/Conversa_API.git```
 Messages: 
 - GET:
   - getAllMessages: “localhost:8080/messages/admin”
+    - Sample Output:
+        ```javascript
+        [    
+          {
+              "id": 1,
+              "message": "Eat Kale, stay fit, die anyway",
+              "user": {
+                  "id": 1,
+                  "username": "Yesica",
+                  "email": "yesica@gmail.com"
+              },
+              "chatroom": {
+                  "id": 2,
+                  "name": "Gecko"
+              }
+          },
+          {
+              "id": 2,
+              "message": "Believe in yourself. Someone has to.",
+              "user": {
+                  "id": 1,
+                  "username": "Yesica",
+                  "email": "yesica@gmail.com"
+              },
+              "chatroom": {
+                  "id": 1,
+                  "name": "Axolotl"
+              }
+          }
+        ]
   - getMessagesById: “localhost:8080/messages/{id}
+    - Sample Output:
+      ```javascript
+      {
+        "id": 3,
+        "message": "If, at first, you don’t succeed, destroy the evidence that you tried.",
+        "user": {
+            "id": 3,
+            "username": "Jean",
+            "email": "jean@hotmail.com"
+        },
+        "chatroom": {
+            "id": 2,
+            "name": "Gecko"
+        }
+      }
 
 POST
   - addNewMessage: “localhost:8080/messages” -> Request Body:
-    - Sample payload: 
+    - Sample Payload: 
         ```javascript
       {
           "userId" : 2,
           "message" : "Earth is this galaxy's insane asylum. Welcome to my ward.",
           "chatroomId" : 3
       }
+    - Sample Output:
+      ```javascript
+      {
+        "id": 8,
+        "message": "Earth is this galaxy's insane asylum. Welcome to my ward.",
+        "user": {
+            "id": 2,
+            "username": "Marvellous",
+            "email": "marvellous@outlook.com"
+        },
+        "chatroom": {
+            "id": 3,
+            "name": "Aploparaksis Turdi"
+        }
+      }
     
 DELETE
   - deleteMessage: “localhost:8080/messages/{id}”
+    - Sample Output:
+      ```javascript
+      {
+        "id": 3,
+        "message": "If, at first, you don’t succeed, destroy the evidence that you tried.",
+        "user": {
+            "id": 3,
+            "username": "Jean",
+            "email": "jean@hotmail.com"
+        },
+        "chatroom": {
+            "id": 2,
+            "name": "Gecko"
+        }
+      }
 
 Chatrooms: 
 - GET:
