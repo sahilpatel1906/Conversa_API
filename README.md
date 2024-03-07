@@ -11,10 +11,10 @@
 
 ## Project Description
 
-This back-end project utilised Java, Spring Boot and a PostgreSQL database to build a chatroom Application Programming Interface (API) that allows users to make request to a back-end database.
+This back-end project utilised Java, Spring Boot and a PostgreSQL database to build a chatroom application programming interface (API) that allows users to make requests to a back-end database.
 
 
-The motivation behind this project was to deepen our understanding of developing a back-end API using the Spring Framework in conjunction with a PostgreSQL database.
+The motivation behind this project was to deepen our understanding of developing back-end APIs using the Spring Framework in conjunction with PostgreSQL databases.
 
 
 
@@ -44,13 +44,13 @@ The motivation behind this project was to deepen our understanding of developing
 - Create Controllers and Services to cover the Create, Read, Update and Delete (CRUD) routes for User, Chatroom, and Message.
 
 ### Extensions
-- Create derived queries to enable functionality to filter by chatroom_id and filter by user_id.
-- Add functionality for a user to add a profile picture.
-- Add functionality for a user to post images to a chatroom.
-- Add an AI chatbot to a chatroom and add functionality to enable it to respond to messages from a user.
-- Import external AI APIs to allow for an increased scope of responses for the Ai chatbot.
+- Create derived queries to enable functionality to filter by chatroom_id and filter by user_id ✅
+- Add functionality for a user to add a profile picture ✅
+- Add functionality for a user to post images to a chatroom ✅
+- Add an AI chatbot to a chatroom and add functionality to enable it to respond to messages from a user ✅
+- Import external AI APIs to allow for an increased scope of responses for the AI chatbot.
 - Create public/private chatrooms using Booleans.
-- Add functionality for a user to post voicenotes in a chatroom.
+- Add functionality for a user to post voice notes in a chatroom.
 
 
 ### Entity relationship diagrams
