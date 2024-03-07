@@ -284,18 +284,72 @@ Messages:
 Chatrooms: 
 - GET:
   - getAllChatrooms: “localhost:8080/chatrooms/admin”
+    - Sample Output:
+      ```javascript
+      [
+        {
+            "id": 1,
+            "name": "Axolotl"
+        },
+        {
+            "id": 2,
+            "name": "Gecko"
+        }
+      ]
   - getChatroomsById:  “localhost:8080/chatrooms/{id}”
-
-POST:
+    - Sample Output:
+      ```javascript
+      {
+        "id": 1,
+        "name": "Axolotl"
+      }
+  - filterByUserId: "localhost:8080/chatrooms?userId={id}"
+    - Sample Output:
+      ```javascript
+      [
+        {
+            "id": 1,
+            "name": "Axolotl"
+        },
+        {
+            "id": 2,
+            "name": "Gecko"
+        }
+      ]
+- POST:
   - addNewchatroom: “localhost:8080/chatrooms/” -> Request Body:
-    - Sample payload:
-    ```javascript
-    {
-       "name": "Gorilla"
-    }
-
-DELETE:
-  - deleteChatroomsById: “localhost:8080/chatrooms/{id}” 
+    - Sample Payload:
+      ```javascript
+      {
+         "name": "gecko"
+      }
+    - Sample Output:
+      ```javascript
+      {
+        "id": 4,
+        "name": "gecko"
+      }
+- PUT:
+  - updateChatroomById: "localhost:8080/chatrooms/{id}" -> Request Body:
+    - Sample Payload:
+      ```javascript
+      {
+        "name": "new_name"
+      }
+    - Sample Output:
+      ```javascript
+      {
+        "id": 2,
+        "name": "new_name"
+      }
+- DELETE:
+  - deleteChatroomsById: “localhost:8080/chatrooms/{id}”
+    - Sample Output:
+      ```javascript
+      {
+        "id": 1,
+        "name": "Axolotl"
+      }
 
 
 
