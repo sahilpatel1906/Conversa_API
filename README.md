@@ -61,6 +61,9 @@ The motivation behind this project was to deepen our understanding of developing
 ### Class diagrams
 <img width="953" alt="Screenshot 2024-03-05 at 12 48 26" src="https://github.com/sahilpatel1906/Conversa_API/assets/156658708/9c30b07a-2576-43a8-a84d-7c23a0604c11">
 
+<img width="953" alt="Screenshot 2024-03-07 at 14 40 30" src="https://github.com/sahilpatel1906/Conversa_API/assets/156658708/b55fa78b-f81e-421d-9355-823c9519919e">
+
+
 
 ### The URL of the GitHub repository that contains the code:
 
