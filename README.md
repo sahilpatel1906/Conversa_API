@@ -121,7 +121,7 @@ Run the command ```git clone git@github.com:sahilpatel1906/Conversa_API.git```
 
   - POST:
     - addNewUser: “localhost:8080/users” -> Request Body:
-      - Sample payload:
+      - Sample Payload:
         ```javascript
         {
           "username": "Gorilla",
@@ -133,6 +133,21 @@ Run the command ```git clone git@github.com:sahilpatel1906/Conversa_API.git```
           "id": 6,
           "username": "Gorilla",
           "email": "Gorilla@Gorilla.com"
+        }
+  - PUT:
+    - updateUserById: "localhost:8080/users/{id}" -> Request Body:
+      - Sample Payload:
+        ```javascript
+        {
+          "username": "Not Yessica",
+          "email": "notyessica@test.com"
+        }
+      - Sample Output:
+        ```javascript
+        {
+          "id": 1,
+          "username": "Not Yessica",
+          "email": "notyessica@test.com"
         }
   - PATCH:
     - getUserProfilePicture: "localhost:8080/users/{id}/profilePicture"
@@ -228,7 +243,26 @@ Messages:
             "name": "Aploparaksis Turdi"
         }
       }
-    
+- PATCH
+  - updateMessage: "localhost:8080/messages/{id}" -> Request Body:
+    - Sample Payload:
+      ```javascript
+      message edited
+    - Sample Output:
+      ```javascript
+      {
+        "id": 3,
+        "message": "message edited",
+        "user": {
+            "id": 3,
+            "username": "Jean",
+            "email": "jean@hotmail.com"
+        },
+        "chatroom": {
+            "id": 2,
+            "name": "Gecko"
+        }
+      }        
 - DELETE
   - deleteMessage: “localhost:8080/messages/{id}”
     - Sample Output:
