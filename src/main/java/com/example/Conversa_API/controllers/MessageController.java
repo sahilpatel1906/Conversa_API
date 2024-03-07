@@ -51,11 +51,11 @@ public class MessageController {
                 "HELLO I AM ASKALOTL",
                 "I DONT KNOW THAT, I JUST AN AXALOTL 🥺",
                 "LIFE IS LIKE A SANDWICH, THE BREAD COMES FIRST 💯",
-                "WHY DO THEY CALL IT OVEN, WHEN YOU OF IN THE COLD FOOD OUT HOT EAT THE FOOD",
+                "WHY DO THEY CALL IT OVEN, WHEN YOU OF IN THE COLD OF FOOD OUT HOT EAT THE FOOD",
                 "WE BALL, JUST DO IT",
                 "WHEN YOU AT THE WHEN YOU WHEN THE",
                 "HAVE YOU EVER HAD A DREAM WHERE",
-                "AÆAÆÆÆÆÆÆÆÆÆÆÆÆÆÆÆÆÆÆÆÆ"
+                "YOU MISS 100% OF THE SHOTS YOU DON'T TAKE"
         ));
         Random rand = new Random();
         String aiResponseMessage = responses.get(rand.nextInt(responses.size()));
