@@ -146,13 +146,14 @@ Run the command ```git clone git@github.com:sahilpatel1906/Conversa_API.git```
           "email": "yesica@gmail.com"
         }
   - DELETE:
-    - Sample Output:
-      ```javascript
-      {
-        "id": 1,
-        "username": "Yesica",
-        "email": "yesica@gmail.com"
-      }         
+    - deleteUser: "localhost:8080/users/{id}"
+      - Sample Output:
+        ```javascript
+        {
+          "id": 1,
+          "username": "Yesica",
+          "email": "yesica@gmail.com"
+        }         
 Messages: 
 - GET:
   - getAllMessages: “localhost:8080/messages/admin”
@@ -186,7 +187,7 @@ Messages:
               }
           }
         ]
-  - getMessagesById: “localhost:8080/messages/{id}
+  - getMessagesById: “localhost:8080/messages/{id}"
     - Sample Output:
       ```javascript
       {
