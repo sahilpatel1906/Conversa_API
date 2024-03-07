@@ -26,7 +26,7 @@ The motivation behind this project was to deepen our understanding of developing
 
 
 
-**The names and versions of any libraries used**
+**The names and versions of any libraries used:**
 - Spring Boot: Ver. 3.2.3
 - Spring Boot Dev Tools
 - Spring Web
