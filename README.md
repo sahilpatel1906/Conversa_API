@@ -374,25 +374,25 @@ Chatrooms:
 
 <img width="487" alt="Screenshot 2024-03-05 at 14 22 42" src="https://github.com/sahilpatel1906/Conversa_API/assets/156658708/35f58eb8-4b63-43c9-9adb-de81763b139a">
 
-**The first image displays the database table overview** 
+**^ The first image displays the database table overview ^** 
 
 
 
 <img width="473" alt="Screenshot 2024-03-05 at 14 23 02" src="https://github.com/sahilpatel1906/Conversa_API/assets/156658708/8b4f5713-7cf6-4751-a436-3f3eb16b6c80">
 
-**This image displays the chatrooms table**
+**^ This image displays the chatrooms table ^**
 
 
 
 <img width="725" alt="Screenshot 2024-03-05 at 14 23 14" src="https://github.com/sahilpatel1906/Conversa_API/assets/156658708/adbae0c3-86e7-4574-ba6a-919258563b98">
 
-**This image displays the messages table**
+**^ This image displays the messages table ^**
 
 
 
 <img width="447" alt="Screenshot 2024-03-05 at 14 23 25" src="https://github.com/sahilpatel1906/Conversa_API/assets/156658708/0798532c-139d-4dc9-a92c-01480b2a3fe5">
 
-**This image displays the users table**
+**^ This image displays the users table ^**
 
 
 
