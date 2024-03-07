@@ -11,10 +11,17 @@
 
 ## Project Description
 
-This back-end project utilised Java, Spring Boot and a PostgreSQL database to build a chatroom API that would allow the user to make requests using Postman.
+This back-end project utilised Java, Spring Boot and a PostgreSQL database to build a chatroom Application Programming Interface (API) that allows users to make request to a back-end database.
 
 
-The motivation behind this project is to develop an understanding of creating a back-end API utilising Spring Framework and a PostgreSQL database.
+The motivation behind this project is to deepen our understanding of developing a back-end API using the Spring Framework in conjunction with a PostgreSQL database.
+
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+
+
 
 
 **The names and versions of any libraries used**
@@ -356,7 +363,7 @@ Chatrooms:
 
 
 
-### Image displaying the chatroom_db database tables in Postico
+### Images displaying the chatroom_db database tables in Postico
 
 
 
