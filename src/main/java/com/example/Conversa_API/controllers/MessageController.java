@@ -11,8 +11,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Optional;
+import java.io.ObjectInputStream;
+import java.util.*;
 
 @RestController
 @RequestMapping("/messages")
@@ -38,8 +38,32 @@ public class MessageController {
 
     @PostMapping
     public ResponseEntity<Message> addNewMessage(@RequestBody MessageDTO messageDTO) {
+        // check if chatroom is 1. if true then askTheLotl.
         Message message = messageService.saveMessage(messageDTO);
         return new ResponseEntity<>(message, HttpStatus.CREATED);
+    }
+
+    @PostMapping(value = "/{id}/askTheLotl")
+    public ResponseEntity<Message> askTheLotl(@PathVariable long id, @RequestBody String message){
+        long axolotlChatroomId = 1;
+        long askolotlUserId = 1;
+        List<String> responses = new ArrayList<>(Arrays.asList(
+                "HELLO I AM ASKALOTL",
+                "I DONT KNOW THAT, I JUST AN AXALOTL 🥺",
+                "LIFE IS LIKE A SANDWICH, THE BREAD COMES FIRST 💯",
+                "WHY DO THEY CALL IT OVEN, WHEN YOU OF IN THE COLD OF FOOD OUT HOT EAT THE FOOD",
+                "WE BALL, JUST DO IT",
+                "WHEN YOU AT THE WHEN YOU WHEN THE",
+                "HAVE YOU EVER HAD A DREAM WHERE",
+                "YOU MISS 100% OF THE SHOTS YOU DON'T TAKE"
+        ));
+        Random rand = new Random();
+        String aiResponseMessage = responses.get(rand.nextInt(responses.size()));
+        MessageDTO messageDTO = new MessageDTO(message, id, axolotlChatroomId);
+        messageService.saveMessage(messageDTO);
+        MessageDTO aiResponseDTO = new MessageDTO(aiResponseMessage, askolotlUserId, axolotlChatroomId);
+        Message aiResponse = messageService.saveMessage(aiResponseDTO);
+        return new ResponseEntity<Message>(aiResponse, HttpStatus.CREATED);
     }
 
     @DeleteMapping(value = "/{id}")
@@ -61,6 +85,5 @@ public class MessageController {
         }
         return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
     }
-
 
 }

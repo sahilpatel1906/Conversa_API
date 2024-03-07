@@ -28,47 +28,51 @@ public class DataLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-    User Yesica = new User("Yesica", "yesica@gmail.com");
-    userRepository.save(Yesica);
+        User Askalotl = new User("Askalotl_AI", "askalotl@conversa.com");
+        userRepository.save(Askalotl);
 
-    User Marvellous = new User("Marvellous", "marvellous@outlook.com");
-    userRepository.save(Marvellous);
+        User Yesica = new User("Yesica", "yesica@gmail.com");
+        userRepository.save(Yesica);
 
-    User Jean = new User("Jean", "jean@hotmail.com");
-    userRepository.save(Jean);
+        User Marvellous = new User("Marvellous", "marvellous@outlook.com");
+        userRepository.save(Marvellous);
 
-    User Aebel = new User("Aebel", "aebel@conversa.com");
-    userRepository.save(Aebel);
+        User Jean = new User("Jean", "jean@hotmail.com");
+        userRepository.save(Jean);
 
-    User Sahil = new User("Sahil", "sahil@yaoo.com");
-    userRepository.save(Sahil);
+        User Aebel = new User("Aebel", "aebel@conversa.com");
+        userRepository.save(Aebel);
 
-
-    Chatroom axolotl = new Chatroom("Axolotl");
-    chatroomRepository.save(axolotl);
-
-    Chatroom gecko = new Chatroom("Gecko");
-    chatroomRepository.save(gecko);
-
-    Chatroom aploparaksis_turdi = new Chatroom("Aploparaksis Turdi");
-    chatroomRepository.save(aploparaksis_turdi);
+        User Sahil = new User("Sahil", "sahil@yaoo.com");
+        userRepository.save(Sahil);
 
 
+        Chatroom axolotl = new Chatroom("Axolotl");
+        chatroomRepository.save(axolotl);
 
-    Message message1 = new Message("Eat Kale, stay fit, die anyway", Yesica, gecko);
-    messageRepository.save(message1);
-    Message message2 = new Message("Believe in yourself. Someone has to.", Yesica, axolotl);
-    messageRepository.save(message2);
-    Message message3 = new Message("If, at first, you don’t succeed, destroy the evidence that you tried.", Jean, gecko);
-    messageRepository.save(message3);
-    Message message4 = new Message("Shush! I can’t hear what the voices are saying.", Marvellous, axolotl);
-    messageRepository.save(message4);
-    Message message5 = new Message("I said ‘No’ to drugs, but they wouldn’t listen.", Aebel, aploparaksis_turdi);
-    messageRepository.save(message5);
-    Message message6 = new Message("My parents moved a lot when I was a kid. But I always found them.", Yesica, axolotl);
-    messageRepository.save(message6);
-    Message message7 = new Message("You’ll meet three kinds of people in this world: those who can count and those who can’t.",Sahil, aploparaksis_turdi);
-    messageRepository.save(message7);
+        Chatroom gecko = new Chatroom("Gecko");
+        chatroomRepository.save(gecko);
+
+        Chatroom aploparaksis_turdi = new Chatroom("Aploparaksis Turdi");
+        chatroomRepository.save(aploparaksis_turdi);
+
+
+        Message message0 = new Message("HELLO HUMAN I AM ASKALOTL, ASK AWAY", Askalotl, axolotl);
+        messageRepository.save(message0);
+        Message message1 = new Message("Eat Kale, stay fit, die anyway", Yesica, gecko);
+        messageRepository.save(message1);
+        Message message2 = new Message("Believe in yourself. Someone has to.", Yesica, axolotl);
+        messageRepository.save(message2);
+        Message message3 = new Message("If, at first, you don’t succeed, destroy the evidence that you tried.", Jean, gecko);
+        messageRepository.save(message3);
+        Message message4 = new Message("Shush! I can’t hear what the voices are saying.", Marvellous, axolotl);
+        messageRepository.save(message4);
+        Message message5 = new Message("I said ‘No’ to drugs, but they wouldn’t listen.", Aebel, aploparaksis_turdi);
+        messageRepository.save(message5);
+        Message message6 = new Message("My parents moved a lot when I was a kid. But I always found them.", Yesica, axolotl);
+        messageRepository.save(message6);
+        Message message7 = new Message("You’ll meet three kinds of people in this world: those who can count and those who can’t.",Sahil, aploparaksis_turdi);
+        messageRepository.save(message7);
 
 
     }
