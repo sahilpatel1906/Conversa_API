@@ -1,4 +1,4 @@
-# Conversa - A Chatroom API
+<h1 style="text-align: center;">Conversa - A Chatroom API</h1>
 
 # Table of Contents
 1. [Project Description](#project-description)
@@ -14,12 +14,14 @@
 This back-end project utilised Java, Spring Boot and a PostgreSQL database to build a chatroom Application Programming Interface (API) that allows users to make request to a back-end database.
 
 
-The motivation behind this project is to deepen our understanding of developing a back-end API using the Spring Framework in conjunction with a PostgreSQL database.
+The motivation behind this project was to deepen our understanding of developing a back-end API using the Spring Framework in conjunction with a PostgreSQL database.
 
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+
+
+<p style="text-align: center;">![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)</p>
 
 
 
