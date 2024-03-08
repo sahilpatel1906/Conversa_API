@@ -215,31 +215,31 @@ Messages:
     - This route gets all messages with the associated user and chatroom. 
     - Sample Output:
         ```javascript
-        [    
+        [
           {
               "id": 1,
-              "message": "Eat Kale, stay fit, die anyway",
+              "message": "HELLO HUMAN I AM ASKALOTL, ASK AWAY",
               "user": {
                   "id": 1,
+                  "username": "Askalotl_AI",
+                  "email": "askalotl@conversa.com"
+              },
+              "chatroom": {
+                  "id": 1,
+                  "name": "Axolotl"
+              }
+          },
+          {
+              "id": 2,
+              "message": "Eat Kale, stay fit, die anyway",
+              "user": {
+                  "id": 2,
                   "username": "Yesica",
                   "email": "yesica@gmail.com"
               },
               "chatroom": {
                   "id": 2,
                   "name": "Gecko"
-              }
-          },
-          {
-              "id": 2,
-              "message": "Believe in yourself. Someone has to.",
-              "user": {
-                  "id": 1,
-                  "username": "Yesica",
-                  "email": "yesica@gmail.com"
-              },
-              "chatroom": {
-                  "id": 1,
-                  "name": "Axolotl"
               }
           },
           {
@@ -254,8 +254,60 @@ Messages:
                   "id": 1,
                   "name": "Axolotl"
               }
+          },
+          {
+              "id": 4,
+              "message": "If, at first, you don’t succeed, destroy the evidence that you tried.",
+              "user": {
+                  "id": 4,
+                  "username": "Jean",
+                  "email": "jean@hotmail.com"
+              },
+              "chatroom": {
+                  "id": 2,
+                  "name": "Gecko"
+              }
+          },
+          {
+              "id": 5,
+              "message": "Shush! I can’t hear what the voices are saying.",
+              "user": {
+                  "id": 3,
+                  "username": "Marvellous",
+                  "email": "marvellous@outlook.com"
+              },
+              "chatroom": {
+                  "id": 1,
+                  "name": "Axolotl"
+              }
+          },
+          {
+              "id": 6,
+              "message": "I said ‘No’ to drugs, but they wouldn’t listen.",
+              "user": {
+                  "id": 5,
+                  "username": "Aebel",
+                  "email": "aebel@conversa.com"
+              },
+              "chatroom": {
+                  "id": 3,
+                  "name": "Aploparaksis Turdi"
+              }
+          },
+          {
+              "id": 7,
+              "message": "My parents moved a lot when I was a kid. But I always found them.",
+              "user": {
+                  "id": 2,
+                  "username": "Yesica",
+                  "email": "yesica@gmail.com"
+              },
+              "chatroom": {
+                  "id": 1,
+                  "name": "Axolotl"
+              }
           }
-        ]
+        ]    
   - getMessagesById: “localhost:8080/messages/{id}"
     - This route gets a message by Id.
     - Sample Output:
@@ -361,8 +413,9 @@ Messages:
 
 Chatrooms: 
 - GET:
-  - getAllChatrooms: “localhost:8080/chatrooms/admin”
-    - Sample Output:
+  - getAllChatroomsAndFilters: “localhost:8080/chatrooms?userId={id}”
+    - If presented with userId parameter, the sample output is chatrooms filtered by userId as shown in sample output 1. Otherwise,  this route will return all chatrooms, as shown in sample output 2.
+    - Sample Output 1:
       ```javascript
       [
         {
@@ -372,6 +425,22 @@ Chatrooms:
         {
             "id": 2,
             "name": "Gecko"
+        }
+      ]
+    - Sample Output 2:
+      ```javascript
+      [
+        {
+            "id": 1,
+            "name": "Axolotl"
+        },
+        {
+            "id": 2,
+            "name": "Gecko"
+        },
+        {
+            "id": 3,
+            "name": "Aploparaksis Turdi"
         }
       ]
   - getChatroomsById:  “localhost:8080/chatrooms/{id}”
@@ -381,19 +450,6 @@ Chatrooms:
         "id": 1,
         "name": "Axolotl"
       }
-  - filterByUserId: "localhost:8080/chatrooms?userId={id}"
-    - Sample Output:
-      ```javascript
-      [
-        {
-            "id": 1,
-            "name": "Axolotl"
-        },
-        {
-            "id": 2,
-            "name": "Gecko"
-        }
-      ]
 - POST:
   - addNewchatroom: “localhost:8080/chatrooms/” -> Request Body:
     - Sample Payload:
