@@ -87,23 +87,59 @@ Run the command ```git clone git@github.com:sahilpatel1906/Conversa_API.git```
 **List of routes for the Conversa API**                    
 - Users:
   - GET:                 
-    - getAllUsers: “localhost:8080/users/admin”
-      - Sample Output:
+    - getAllUsersAndFilters: “localhost:8080/users?chatroomId={id}”
+      - If presented with chatroomId parameter, the sample output is users filtered by chatroomId as shown in sample output 1. Otherwise,  this route will return all users, as shown in sample output 2.
+      - Sample Output 1:
         ```javascript
         [
           {
-              "id": 1,
+              "id": 2,
               "username": "Yesica",
               "email": "yesica@gmail.com"
           },
           {
+              "id": 4,
+              "username": "Jean",
+              "email": "jean@hotmail.com"
+          }
+        ]
+      - Sample Output 2:
+        ```javascript
+        [
+          {
+              "id": 1,
+              "username": "Askalotl_AI",
+              "email": "askalotl@conversa.com"
+          },
+          {
               "id": 2,
+              "username": "Yesica",
+              "email": "yesica@gmail.com"
+          },
+          {
+              "id": 3,
               "username": "Marvellous",
               "email": "marvellous@outlook.com"
+          },
+          {
+              "id": 4,
+              "username": "Jean",
+              "email": "jean@hotmail.com"
+          },
+          {
+              "id": 5,
+              "username": "Aebel",
+              "email": "aebel@conversa.com"
+          },
+          {
+              "id": 6,
+              "username": "Sahil",
+              "email": "sahil@yaoo.com"
           }
         ]
       
     - getUserById: “localhost:8080/users/{id}”
+      - This route gets each user by Id.
       - Sample Output:
         ```javascript
         {
@@ -111,28 +147,17 @@ Run the command ```git clone git@github.com:sahilpatel1906/Conversa_API.git```
             "username": "Yesica",
             "email": "yesica@gmail.com"
         }
-    - filterByChatroomId: "localhost:8080/users?chatroomId={id}"
+    
+    - getUserProfilePicture: "localhost:8080/users/{id}/profilePicture"
+      - This route retrieves the URL for the profile picture associated with the user Id.
       - Sample Output:
         ```javascript
-        [
-          {
-              "id": 1,
-              "username": "Yesica",
-              "email": "yesica@gmail.com"
-          },
-          {
-              "id": 2,
-              "username": "Marvellous",
-              "email": "marvellous@outlook.com"
-          }
-        ]
-    - getUserProfilePicture: "localhost:8080/users/{id}/profilePicture"
-      - Sample Output:
-        ![response](https://github.com/sahilpatel1906/Conversa_API/assets/156692751/4f1f8102-3334-48e6-9a7c-44264afd7191)
+        ./images1.png
 
 
   - POST:
     - addNewUser: “localhost:8080/users” -> Request Body:
+      - This route adds a new user to the database.
       - Sample Payload:
         ```javascript
         {
@@ -148,6 +173,7 @@ Run the command ```git clone git@github.com:sahilpatel1906/Conversa_API.git```
         }
   - PUT:
     - updateUserById: "localhost:8080/users/{id}" -> Request Body:
+      - This route updates an existing user in the database based on the Id.
       - Sample Payload:
         ```javascript
         {
@@ -163,6 +189,7 @@ Run the command ```git clone git@github.com:sahilpatel1906/Conversa_API.git```
         }
   - PATCH:
     - getUserProfilePicture: "localhost:8080/users/{id}/profilePicture"
+      - This route uploads an image and saves the URL to the user in the database based on their Id.
       - Sample Payload:
           <img width="841" alt="Screenshot 2024-03-06 at 18 35 25" src="https://github.com/sahilpatel1906/Conversa_API/assets/156692751/47ebe57f-cd4b-4099-aaf8-7f36a65bae5c">
       - Sample Output:
@@ -174,6 +201,7 @@ Run the command ```git clone git@github.com:sahilpatel1906/Conversa_API.git```
         }
   - DELETE:
     - deleteUser: "localhost:8080/users/{id}"
+      - This route deletes a user from the database based on their Id.
       - Sample Output:
         ```javascript
         {
