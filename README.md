@@ -211,7 +211,8 @@ Run the command ```git clone git@github.com:sahilpatel1906/Conversa_API.git```
         }         
 Messages: 
 - GET:
-  - getAllMessages: “localhost:8080/messages/admin”
+  - getAllMessages: “localhost:8080/messages”
+    - This route gets all messages with the associated user and chatroom. 
     - Sample Output:
         ```javascript
         [    
@@ -240,9 +241,23 @@ Messages:
                   "id": 1,
                   "name": "Axolotl"
               }
+          },
+          {
+              "id": 3,
+              "message": "Believe in yourself. Someone has to.",
+              "user": {
+                  "id": 2,
+                  "username": "Yesica",
+                  "email": "yesica@gmail.com"
+              },
+              "chatroom": {
+                  "id": 1,
+                  "name": "Axolotl"
+              }
           }
         ]
   - getMessagesById: “localhost:8080/messages/{id}"
+    - This route gets a message by Id.
     - Sample Output:
       ```javascript
       {
@@ -261,6 +276,7 @@ Messages:
 
 - POST
   - addNewMessage: “localhost:8080/messages” -> Request Body:
+    - This route adds a new message to the database. The sample payload describes which user has sent a new message to which chatroom.
     - Sample Payload: 
         ```javascript
       {
@@ -283,16 +299,37 @@ Messages:
             "name": "Aploparaksis Turdi"
         }
       }
-- PATCH
-  - updateMessage: "localhost:8080/messages/{id}" -> Request Body:
+  - askTheLotl: “localhost:8080/{id}/askTheLotl” -> Request Body:
+    - This route allows the user to send a message (askalotl - our Axalotl Intelligence chatbot) and get a response.
     - Sample Payload:
       ```javascript
-      message edited
+      Hi, how are you?
+    - Sample Output:
+      ```javascript
+      {
+        "id": 10,
+        "message": "YOU MISS 100% OF THE SHOTS YOU DON'T TAKE",
+        "user": {
+            "id": 1,
+            "username": "Askalotl_AI",
+            "email": "askalotl@conversa.com"
+        },
+        "chatroom": {
+            "id": 1,
+            "name": "Axolotl"
+        }
+      }
+- PATCH
+  - updateMessage: "localhost:8080/messages/{id}" -> Request Body:
+    - This route edits an existing message by Id.
+    - Sample Payload:
+      ```javascript
+      Time is the best teacher of all. Too bad it kills all its students.
     - Sample Output:
       ```javascript
       {
         "id": 3,
-        "message": "message edited",
+        "message": "Time is the best teacher of all. Too bad it kills all its students.",
         "user": {
             "id": 3,
             "username": "Jean",
@@ -305,6 +342,7 @@ Messages:
       }        
 - DELETE
   - deleteMessage: “localhost:8080/messages/{id}”
+    - This route deletes an existing message from the database based on the Id
     - Sample Output:
       ```javascript
       {
